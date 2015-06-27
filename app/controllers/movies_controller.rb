@@ -1,4 +1,4 @@
-#Left off 44:13 starting reviews
+#Left off 1:19:49 starting elasticsearch
 class MoviesController < ApplicationController
   before_action :set_movie, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: [:index, :show]
@@ -6,6 +6,14 @@ class MoviesController < ApplicationController
   # GET /movies.json
   def index
     @movies = Movie.all
+  end
+
+  def search
+    if params[:search].present?
+      @movies = Movie.search(params[:search])
+    else
+      @movies = Movie.all
+    end
   end
 
   # GET /movies/1

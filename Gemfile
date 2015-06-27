@@ -17,6 +17,7 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'devise', '~> 3.5.1'
 gem 'paperclip', '~> 4.3.0'
 gem 'bootstrap-sass', '~> 3.3.5.1'
+gem 'searchkick', '~> 0.9.0'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
